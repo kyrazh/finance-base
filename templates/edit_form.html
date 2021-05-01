@@ -1,0 +1,33 @@
+<form action="{{url_for('update')}}" method="post" class="row gy-2 gx-3 align-items-center">
+
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInput">id</label>
+    <input type="text" name="id" class="form-control" id="autoSizingInput" placeholder="ID">
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInputGroup">summa</label>
+    <div class="input-group">
+      <div class="input-group-text">RUB</div>
+      <input type="text" name="summa" class="form-control" id="autoSizingInputGroup" placeholder="Новая Сумма">
+    </div>
+  </div>
+
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInput">comment</label>
+    <input type="text" name="comment" class="form-control" id="autoSizingInput" placeholder="Новый комментарий">
+  </div>
+
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingSelect">optype</label>
+    <select class="form-select" id="autoSizingSelect" name="optype">
+      <option selected>Тип операции</option>
+      <option value="Расход">Расход</option>
+      <option value="Доход">Доход</option>
+
+    </select>
+  </div>
+
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Изменить</button>
+  </div>
+</form>

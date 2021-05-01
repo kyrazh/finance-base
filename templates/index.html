@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} Главная {% endblock %}
+{% block body %}
+<div style="text-align: center">
+  <h4 align="left">Создание новой записи</h4>
+{% include 'create_form.html' %}
+  <h4 align="left">Редактирование записи</h4>
+{% include 'edit_form.html' %}
+  </div>
+
+
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Сумма</th>
+      <th scope="col">Сумма в USD</th>
+      <th scope="col">Тип операции</th>
+      <th scope="col">Дата и время</th>
+      <th scope="col">Комментарий</th>
+    </tr>
+  </thead>
+
+  {% for row in records %}
+
+  <tbody>
+    <tr>
+      <td>{{row.id}}</td>
+      <td>{{row.summa}}</td>
+      <td>{{row.summausd}}</td>
+      <td>{{row.optype}}</td>
+      <td>{{row.currentdate}}</td>
+      <td>{{row.comment}}</td>
+      <td>
+        <a href="/delete/{{row.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Вы уверены?')">Удалить</a>
+      </td>
+    </tr>
+
+  </tbody>
+
+  {% endfor %}
+</table>
+{% endblock %}
+</html>

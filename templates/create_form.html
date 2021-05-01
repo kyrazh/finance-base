@@ -1,0 +1,30 @@
+<form action="{{url_for('insert')}}" method="post" class="row gy-2 gx-3 align-items-center">
+
+  <div class="col-auto">
+
+    <label class="visually-hidden" for="autoSizingInputGroup">summa</label>
+    <input type="hidden" name="id" value="id">
+    <div class="input-group">
+      <div class="input-group-text">RUB</div>
+      <input type="text" class="form-control" id="autoSizingInputGroup" name ="summa" placeholder="Сумма">
+    </div>
+  </div>
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingInput">comment</label>
+    <input type="text" class="form-control" id="autoSizingInput" name="comment" placeholder="Комментарий">
+  </div>
+
+  <div class="col-auto">
+    <label class="visually-hidden" for="autoSizingSelect">optype</label>
+    <select class="form-select" id="autoSizingSelect" name="optype">
+      <option selected>Тип операции</option>
+      <option value="Расход">Расход</option>
+      <option value="Доход">Доход</option>
+    </select>
+  </div>
+
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Добавить</button>
+  </div>
+
+</form>
